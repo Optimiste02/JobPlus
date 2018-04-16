@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+    <ScrollView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+        >
+
+        <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:context="com.example.ellobo.llll.RegisterActivity">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingBottom="0dp"
+                android:layout_marginLeft="45dp"
+                android:layout_marginRight="45dp"
+                >
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/transparent"
+                    android:layout_gravity="center"
+                    android:orientation="vertical">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@android:color/transparent"
+                        android:orientation="vertical"
+                        >
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center">
+                            <TextView
+                                android:id="@+id/reg_entrep"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:textAlignment="center"
+                                android:textSize="20dp"
+                                android:textColor="#1d446f"
+                                android:text="@string/registre_entreprise" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="130dp"
+                            android:layout_height="110dp"
+                            android:layout_gravity="center">
+                            <ImageView
+                                android:id="@+id/ImgProfil"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:src="@drawable/entrep1" />
+                        </LinearLayout>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="1dp"
+                        android:paddingTop="5dp"
+                        android:orientation="vertical"
+                        >
+                        <EditText
+                            android:id="@+id/Edt_nomEntreprise"
+                            android:layout_width="match_parent"
+                            android:layout_height="30dp"
+                            android:background="@drawable/bkg_btn"
+                            android:hint="Nom de votre entreprise"
+                            android:singleLine="true"
+                            android:textColor="#1d446f"
+                            android:textColorHint="#1d446f"
+                            android:textSize="12dp"
+                            android:textStyle="italic" />
+
+
+                        <EditText
+                            android:id="@+id/Edt_emailEntreprise"
+                            android:layout_width="match_parent"
+                            android:layout_height="30dp"
+                            android:singleLine="true"
+                            android:background="@drawable/bkg_btn"
+                            android:hint="Email de votre entreprise"
+                            android:textStyle="italic"
+                            android:textColor="#1d446f"
+                            android:textColorHint="#1d446f"
+                            android:textSize="12dp"
+                            android:layout_marginTop="10dp"/>
+
+
+
+                        <EditText
+                            android:id="@+id/Edt_passwordEntreprise"
+                            android:layout_width="match_parent"
+                            android:layout_height="30dp"
+                            android:singleLine="true"
+                            android:inputType="textPassword"
+                            android:background="@drawable/bkg_btn"
+                            android:hint="Mot de passe"
+                            android:textStyle="italic"
+                            android:textColor="#1d446f"
+                            android:textColorHint="#1d446f"
+                            android:textSize="12dp"
+                            android:layout_marginTop="10dp"/>
+
+
+
+                        <EditText
+                            android:id="@+id/Edt_tel"
+                            android:layout_width="match_parent"
+                            android:layout_height="30dp"
+                            android:background="@drawable/bkg_btn"
+                            android:hint="Telephone"
+                            android:inputType="textPhonetic"
+                            android:singleLine="true"
+                            android:textSize="12dp"
+                            android:textColor="#1d446f"
+                            android:textColorHint="#1d446f"
+                            android:textStyle="italic"
+                            android:layout_marginTop="10dp"/>
+
+
+                        <EditText
+                            android:id="@+id/Edt_adresse"
+                            android:layout_width="match_parent"
+                            android:layout_height="30dp"
+                            android:singleLine="true"
+                            android:background="@drawable/bkg_btn"
+                            android:hint="Adresse Entreprise"
+                            android:textStyle="italic"
+                            android:textSize="12dp"
+                            android:textColor="#1d446f"
+                            android:textColorHint="#1d446f"
+                            android:layout_marginTop="10dp"/>
+
+                        <EditText
+                            android:id="@+id/Edt_domaine"
+                            android:layout_width="match_parent"
+                            android:layout_height="30dp"
+                            android:singleLine="true"
+                            android:background="@drawable/bkg_btn"
+                            android:hint="Domaine d'affaire"
+                            android:textStyle="italic"
+                            android:textSize="12dp"
+                            android:textColor="#1d446f"
+                            android:textColorHint="#1d446f"
+                            android:layout_marginTop="10dp"/>
+                        <EditText
+                            android:id="@+id/Edt_description"
+                            android:layout_width="match_parent"
+                            android:layout_height="30dp"
+                            android:singleLine="true"
+                            android:background="@drawable/bkg_btn"
+                            android:hint="Description de votre entreprise"
+                            android:textStyle="italic"
+                            android:textSize="12dp"
+                            android:textColor="#1d446f"
+                            android:textColorHint="#1d446f"
+                            android:layout_marginTop="10dp"/>
+
+
+
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:paddingLeft="25dp"
+                        android:paddingRight="25dp"
+                        android:orientation="vertical"
+                        >
+                        <Button
+                            android:id="@+id/btn_enregistrer"
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:background="@drawable/bkg_btn"
+                            android:textColor="#1d446f"
+                            android:layout_marginTop="5dp"
+                            android:text="S'inscrire ! "/>
+
+
+                    </LinearLayout>
+
+
+
+                </LinearLayout>
+            </LinearLayout>
+
+        </android.support.constraint.ConstraintLayout>
+
+    </ScrollView>
+</LinearLayout>
