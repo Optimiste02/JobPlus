@@ -30,6 +30,7 @@ import org.json.JSONObject;
 
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
+import java.sql.Blob;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.regex.Matcher;
@@ -39,8 +40,9 @@ public class RegisterActivity extends AppCompatActivity {
     private Button btn_enregistrer;
     private EditText nom,email, password,telephone , adresse , domaineD,description;
     private String Strnom, Stremail, Strpassword, Strtel , Stradresse, Strdomaine, Strdescription, Image;
-    private ImageView Flyer;
+    private ImageView Profil;
     private Bitmap bitmap;
+    private Blob blob;
     int PICK_IMAGE_REQUEST = 1;
     public static final String PatternMail = "\\b[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,4}\\b";
     private RequestQueue queue;
@@ -54,7 +56,7 @@ public class RegisterActivity extends AppCompatActivity {
         setContentView(R.layout.activity_register);
 
         btn_enregistrer = (Button) findViewById(R.id.btn_enregistrer);
-        Flyer = (ImageView) findViewById(R.id.ImgProfil);
+        Profil = (ImageView) findViewById(R.id.ImgProfil);
         nom = (EditText) findViewById(R.id.Edt_nomEntreprise);
         email = (EditText) findViewById(R.id.Edt_emailEntreprise);
         password = (EditText) findViewById(R.id.Edt_passwordEntreprise);
@@ -64,7 +66,7 @@ public class RegisterActivity extends AppCompatActivity {
         description = (EditText) findViewById(R.id.Edt_description);
 
 
-        Flyer.setOnClickListener(new View.OnClickListener() {
+        Profil.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 ShowFileChooser();
@@ -87,14 +89,46 @@ public class RegisterActivity extends AppCompatActivity {
                 if  (Strnom.equalsIgnoreCase("") || Stremail.equalsIgnoreCase("") || Strpassword.equalsIgnoreCase("")){
                     Toast.makeText(RegisterActivity.this, "Veuillez remplir tout les champs ", Toast.LENGTH_SHORT).show();
                 }
-                else  if  (Strnom.trim().length() <3) {
-                    Toast.makeText(RegisterActivity.this, "Username trop court", Toast.LENGTH_SHORT).show();
+                else  if  (Strnom.trim().length() > 50) {
+                    Toast.makeText(RegisterActivity.this, "Le nom de votre entreprise ne peut contenir plus 50 caracteres", Toast.LENGTH_SHORT).show();
                 }
                 else  if(Stremail.equalsIgnoreCase("")||!m.find()){
                     Toast.makeText(RegisterActivity.this, " Format Mail Invalide", Toast.LENGTH_SHORT).show();
                 }
-                else if (Strpassword.trim().length() < 3) {
-                    Toast.makeText(RegisterActivity.this, "Password Trop Court", Toast.LENGTH_SHORT).show();
+                if (Stremail.length() > 50)
+                {
+                    Toast.makeText(RegisterActivity.this, "Votre email doit contenir au plus 50 carateres", Toast.LENGTH_SHORT).show();
+
+                }
+                if (Stradresse.length() > 200)
+                {
+                    Toast.makeText(RegisterActivity.this, "Votre adresse doit contenir au plus 200 carateres", Toast.LENGTH_SHORT).show();
+
+                }
+                if (Strdomaine.length() > 100)
+                {
+                    Toast.makeText(RegisterActivity.this, "Votre domaine  doit contenir au plus 100 carateres", Toast.LENGTH_SHORT).show();
+
+                }
+                String upperCaseChars = "(.*[A-Z].*)";
+                if (!Strpassword.matches(upperCaseChars ))
+                {
+                    Toast.makeText(RegisterActivity.this, "Votre mot de passe doit contenir au moins un lettre majiscule", Toast.LENGTH_SHORT).show();
+                }
+                String numbers = "(.*[0-9].*)";
+                if (!Strpassword.matches(numbers ))
+                {
+                    Toast.makeText(RegisterActivity.this, "Votre mot de passe doit contenir au moins un chiffre", Toast.LENGTH_SHORT).show();
+                }
+                String specialChars = "(.*[,~,!,@,#,$,%,^,&,*,(,),-,_,=,+,[,{,],},|,;,:,<,>,/,?].*$)";
+                if (Strpassword.matches(specialChars ))
+                {
+                    Toast.makeText(RegisterActivity.this, "Votre mot de passe doit contenir de caractere speciaux", Toast.LENGTH_SHORT).show();
+                }
+                if (Strpassword.length() > 20 || Strpassword.length() < 8)
+                {
+                    Toast.makeText(RegisterActivity.this, "Votre mot de passe doit etre compris entre 8 a 20 carateres", Toast.LENGTH_SHORT).show();
+
                 }
                 else {
                     RegisterMember();
@@ -130,12 +164,13 @@ public class RegisterActivity extends AppCompatActivity {
             Uri filePath = data.getData();
             try {
                 //Getting the Bitmap from Gallery
-                Flyer.setVisibility(View.VISIBLE);
+                Profil.setVisibility(View.VISIBLE);
                 bitmap = MediaStore.Images.Media.getBitmap(getContentResolver(), filePath);
                 //Setting the Bitmap to ImageView
-                Flyer.setImageBitmap(bitmap);
+             //   bitmap.setima
+                Profil.setImageBitmap(bitmap);
             } catch (IOException e) {
-                e.printStackTrace();
+               e.printStackTrace();
             }
         }
     }
@@ -163,8 +198,8 @@ public class RegisterActivity extends AppCompatActivity {
             @Override
             protected Map<String, String> getParams() throws AuthFailureError {
                 Map<String, String> param = new HashMap<String, String>();
-                param.put("Nom", Strnom);
-                param.put("Email", Stremail);
+                param.put("Name", Strnom);
+                param.put("Mail", Stremail);
                 param.put("Password", Strpassword);
                 param.put("Telephone", Strtel);
                 param.put("Adresse", Stradresse);
@@ -183,7 +218,10 @@ public class RegisterActivity extends AppCompatActivity {
     public void displayAlert(final String code) {
         if (code.equals("Req_Success")) {
             // Toast.makeText(Register.this, "SuccessFull", Toast.LENGTH_LONG).show();
-            finish();
+            Intent intent = new Intent(RegisterActivity.this, Panell.class);
+
+            startActivity(intent);
+          //  finish();
         } else if (code.equals("ReqFound")) {
         }
     }

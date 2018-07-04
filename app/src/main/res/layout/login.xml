@@ -24,6 +24,7 @@
         android:gravity="center"
         android:layout_marginLeft="10dp"
         android:layout_marginRight="10dp"
+
         >
 
 
@@ -33,7 +34,8 @@
             android:layout_height="match_parent"
             android:gravity="center"
             android:background="@drawable/trans_white_rectangle"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            >
 
             <TextView
                 android:layout_width="match_parent"
@@ -56,7 +58,7 @@
                 android:layout_marginRight="20dp"
                 android:background="@drawable/rounded_white"
                 android:drawablePadding="5dp"
-                android:hint="Email"
+                android:hint="Email ou nom d'utilisateur"
                 android:textColorHint="#1d446f"
                 android:textSize="14sp"
                 android:textStyle="italic" />
@@ -68,9 +70,10 @@
                 android:layout_marginBottom="5dp"
                 android:layout_marginLeft="20dp"
                 android:layout_marginRight="20dp"
-                android:background="@drawable/bkg_btn1"
+                android:background="@drawable/rounded_white"
                 android:drawablePadding="5dp"
-                android:hint="Password"
+                android:hint="Mot de passe"
+
                 android:inputType="textPassword"
                 android:textColorHint="#1d446f"
                 android:textSize="14sp"
@@ -126,6 +129,9 @@
                 android:text="Connection"
                 android:textColor="@color/white"
                 android:textStyle="normal" />
+
+
+
 
         </LinearLayout>
 

@@ -1,25 +1,35 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    android:background="#f0f6fc"
     tools:showIn="navigation_view">
 
     <group android:checkableBehavior="single">
         <item
-            android:id="@+id/nav_camera"
-            android:icon="@drawable/ic_menu_camera"
-            android:title="Import" />
+            android:id="@+id/Model_CV"
+            android:icon="@drawable/cv"
+            android:title="Modele de cv" />
         <item
-            android:id="@+id/nav_gallery"
-            android:icon="@drawable/ic_menu_gallery"
-            android:title="Gallery" />
+            android:id="@+id/Lettre_Motivation"
+            android:icon="@drawable/motivation"
+            android:title="Lettre de motivation" />
         <item
-            android:id="@+id/nav_slideshow"
-            android:icon="@drawable/ic_menu_slideshow"
-            android:title="Slideshow" />
+            android:id="@+id/Mes_Publication"
+            android:icon="@drawable/avis"
+            android:title="Mes Publications" />
         <item
-            android:id="@+id/nav_manage"
-            android:icon="@drawable/ic_menu_manage"
-            android:title="Tools" />
+            android:id="@+id/Temoignages"
+            android:icon="@drawable/temoignage2"
+            android:title="Temoignages" />
+        <item
+            android:id="@+id/Aide"
+            android:icon="@drawable/aide"
+            android:title="Aide" />
+
+        <item
+            android:id="@+id/A_Propos"
+            android:icon="@drawable/a_propos"
+            android:title="A propos" />
     </group>
 
     <item android:title="Communicate">
@@ -29,9 +39,14 @@
                 android:icon="@drawable/ic_menu_share"
                 android:title="Share" />
             <item
-                android:id="@+id/nav_send"
-                android:icon="@drawable/ic_menu_send"
-                android:title="Send" />
+                android:id="@+id/Contact"
+                android:icon="@drawable/contact"
+                android:title="Nous Contactez" />
+
+            <item
+                android:id="@+id/Deconnection"
+                android:icon="@drawable/deconnection"
+                android:title="Deconnection" />
         </menu>
     </item>
 

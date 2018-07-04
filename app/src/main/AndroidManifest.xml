@@ -28,11 +28,19 @@
         <activity android:name=".RegisterActivity"></activity>
         <activity android:name=".RegisterJobseekerActivity" />
         <activity android:name=".LoginActivity" />
+        <activity android:name=".Popup" />
+        <activity android:name=".Profil" />
+        <activity android:name=".Temoignage" />
+        <activity android:name=".MesPub" />
+        <activity android:name=".Post" />
+        <activity android:name=".Modelcv" />
 
         <activity
-            android:name=".Panel"
+            android:name=".Panell"
             android:label="JOB+"
             android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
+
+
 
 </manifest>

@@ -1,13 +1,38 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+
+    android:background="@drawable/bkg_register"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
-    tools:context="com.example.steeve.myapplication.Panel"
+    tools:context="com.example.steeve.myapplication.Panell"
     tools:showIn="@layout/app_bar_main">
 
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <android.support.v4.view.ViewPager
+      android:id="@+id/viewPager"
+      android:layout_width="match_parent"
+      android:layout_height="70pt"
+      android:inAnimation="@android:anim/slide_in_left"
+      android:outAnimation="@android:anim/slide_out_right"
+      android:autoStart="true"
+      android:flipInterval="3000">
+    </android.support.v4.view.ViewPager>
 
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recycleView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/viewPager"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="3dp"
+        android:layout_marginRight="3dp"/>
+</RelativeLayout>
 
-</android.support.constraint.ConstraintLayout>
+</ScrollView>

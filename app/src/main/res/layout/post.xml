@@ -1,16 +1,181 @@
 <?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+    android:layout_margin="20dp"
+    android:background="@drawable/postshape"
+    android:orientation="vertical"
+    android:padding="10dp">
 
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="fill_parent"
-    android:layout_height="200dp"
-    android:padding="1dip" >
 
-    <ImageView
-        android:id="@+id/image"
-        android:layout_width="fill_parent"
-        android:layout_height="fill_parent"
-        android:adjustViewBounds="true"
+    <TextView
+        android:id="@+id/close"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="50dp"
+        android:text="Publier un avis de recrutement"
+        android:textColor="#1d446f"
+        android:textSize="18dp"
+        android:textStyle="bold" />
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Titre du Poste:"
+            android:textColor="#1d446f"
+            android:textSize="15dp"
+            android:textStyle="italic" />
+
+        <EditText
+            android:id="@+id/editTitrePost"
+            android:layout_width="210dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:hint="Ambulancier"
+
+            android:inputType="textPersonName"
+            android:textSize="15dp"
+
+            android:textStyle="italic" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="20dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Departement :"
+            android:textColor="#1d446f"
+            android:textSize="15dp"
+
+            android:textStyle="italic" />
+
+        <EditText
+            android:id="@+id/edtDepart"
+            android:layout_width="220dp"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="3dp" />
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="20dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Email :"
+            android:textColor="#1d446f"
+            android:textSize="15dp"
+
+            android:textStyle="italic" />
+
+        <EditText
+            android:id="@+id/editEmail"
+            android:layout_width="270dp"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="3dp" />
+    </LinearLayout>
+
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp">
+
+
+        <EditText
+            android:id="@+id/edtDate"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="3dp" />
+
+        <Button
+
+            android:id="@+id/btnDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:text="choisir la date limite"
+
+            />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center">
+
+        <TextView
+            android:id="@+id/fichierText"
+            android:layout_width="320dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="0dp">
+
+
+        <Button
+            android:id="@+id/btnChoose"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_gravity="center"
+
+            android:text=" charger votre avis de recrutement" />
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:src="@mipmap/ic_launcher"
-        android:scaleType="centerCrop" />
-</FrameLayout>
+        android:layout_marginTop="10dp">
+
+        <Button
+
+            android:id="@+id/btnPost"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_marginLeft="10dp"
+            android:background="@drawable/btnpost"
+            android:text="Publier"
+            android:textColor="#ffffff" />
+
+        <Button
+            android:id="@+id/btnCanel"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_marginLeft="50dp"
+            android:background="@drawable/btnpost"
+            android:text="annuler"
+            android:textColor="#ffffff" />
+
+    </LinearLayout>
+
+</LinearLayout>
+

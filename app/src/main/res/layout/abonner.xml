@@ -1,0 +1,380 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingTop="40dp"
+
+    android:orientation="horizontal"
+    android:layout_centerHorizontal="true"
+    android:background="@drawable/bkg_register">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+        >
+
+
+
+    <TextView
+        android:layout_marginTop="10dp"
+
+        android:id="@+id/titreAb"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#1d446f"
+        android:textAlignment="center"
+        android:text="@string/abonner"
+        android:layout_marginBottom="90dp"
+        />
+
+        <LinearLayout
+            android:id="@+id/rang1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/titreAb"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:orientation="horizontal"
+            android:layout_centerHorizontal="true">
+
+            <TextView
+                android:id="@+id/info"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/titreAb"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/departement"
+                android:clickable="true"
+                android:longClickable="true"
+                android:onClick="onClick"
+                android:text="  Informatique  "
+                android:textColor="#1d446f"
+                android:textSize="17dp" />
+
+            <TextView
+                android:id="@+id/sant"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignRight="@id/titreAb"
+                android:layout_below="@id/titreAb"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/departement"
+                android:clickable="true"
+                android:text="  Sante  "
+                android:textColor="#1d446f"
+                android:textSize="17dp" />
+
+            <TextView
+                android:id="@+id/com"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignRight="@id/titreAb"
+                android:layout_below="@id/titreAb"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/departement"
+                android:clickable="true"
+                android:text="  Comptabilite  "
+                android:textColor="#1d446f"
+                android:textSize="17dp" />
+
+
+
+
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/rang2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_below="@+id/rang1"
+            android:orientation="horizontal"
+            android:layout_centerHorizontal="true">
+
+            <TextView
+                android:id="@+id/ges"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/titreAb"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/departement"
+                android:clickable="true"
+                android:text="  Gestion  "
+                android:textColor="#1d446f"
+                android:textSize="17dp" />
+
+            <TextView
+                android:id="@+id/sec"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignRight="@id/titreAb"
+                android:layout_below="@id/titreAb"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/departement"
+                android:clickable="true"
+                android:text="  Secretariat  "
+                android:textColor="#1d446f"
+                android:textSize="17dp" />
+
+            <TextView
+                android:id="@+id/edu"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignRight="@id/titreAb"
+                android:layout_below="@id/titreAb"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/departement"
+                android:clickable="true"
+                android:text="  Education  "
+                android:textColor="#1d446f"
+                android:textSize="17dp" />
+
+
+
+
+        </LinearLayout>
+
+
+
+
+        <LinearLayout
+            android:id="@+id/rang3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_below="@+id/rang2"
+            android:orientation="horizontal"
+            android:layout_centerHorizontal="true">
+
+            <TextView
+                android:id="@+id/admn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/titreAb"
+                android:text="  Administration  "
+                android:layout_marginTop="10dp"
+                android:textColor="#1d446f"
+                android:textSize="17dp"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/departement"
+                />
+
+
+
+            <TextView
+                android:id="@+id/spo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignRight="@id/titreAb"
+                android:text="  Sport  "
+                android:layout_marginRight="10dp"
+                android:layout_below="@id/titreAb"
+                android:layout_marginTop="10dp"
+                android:textColor="#1d446f"
+                android:textSize="17dp"
+                android:background="@drawable/departement"
+                />
+
+            <TextView
+                android:id="@+id/art"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignRight="@id/titreAb"
+                android:layout_below="@id/titreAb"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/departement"
+                android:clickable="true"
+                android:text="  Art  "
+                android:textColor="#1d446f"
+                android:textSize="17dp" />
+
+
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/rang4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/rang3"
+            android:orientation="horizontal"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_centerHorizontal="true">
+
+            <TextView
+                android:id="@+id/env"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/titreAb"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/departement"
+                android:clickable="true"
+                android:text="  Environnement  "
+                android:textColor="#1d446f"
+                android:textSize="17dp" />
+
+
+
+            <TextView
+                android:id="@+id/mec"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignRight="@id/titreAb"
+                android:layout_below="@id/titreAb"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/departement"
+                android:clickable="true"
+                android:text="  Mecanique  "
+                android:textColor="#1d446f"
+                android:textSize="17dp" />
+
+            <TextView
+                android:id="@+id/dro"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignRight="@id/titreAb"
+                android:text="  Droit  "
+                android:layout_marginRight="10dp"
+                android:layout_below="@id/titreAb"
+                android:layout_marginTop="10dp"
+                android:textColor="#1d446f"
+                android:textSize="17dp"
+                android:background="@drawable/departement"
+                />
+
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/rang5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_below="@+id/rang4"
+            android:orientation="horizontal"
+            android:layout_centerHorizontal="true">
+
+            <TextView
+                android:id="@+id/gen"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignRight="@id/titreAb"
+                android:layout_below="@id/titreAb"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/departement"
+                android:clickable="true"
+                android:text="  Genie Civil  "
+                android:textColor="#1d446f"
+                android:textSize="17dp" />
+
+            <TextView
+                android:id="@+id/eco"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/titreAb"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/departement"
+                android:clickable="true"
+                android:text="  Economie  "
+                android:textColor="#1d446f"
+                android:textSize="17dp" />
+
+            <TextView
+                android:id="@+id/pol"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignRight="@id/titreAb"
+                android:layout_below="@id/titreAb"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/departement"
+                android:clickable="true"
+                android:text="  Politique  "
+                android:textColor="#1d446f"
+                android:textSize="17dp" />
+
+
+
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/rang6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_below="@+id/rang5"
+            android:orientation="horizontal"
+            android:layout_centerHorizontal="true">
+
+
+
+
+            <TextView
+                android:id="@+id/aut"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/titreAb"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/departement"
+                android:clickable="true"
+                android:text="  Autres  "
+                android:textColor="#1d446f"
+                android:textSize="17dp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <Button
+                android:id="@+id/savee"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:background="@color/startblue"
+                android:text="Sauvegarder"
+                android:textColor="#fff"
+
+                />
+        </LinearLayout>
+
+
+
+    </RelativeLayout>
+
+</LinearLayout>
+
+
+
+
+
+
+

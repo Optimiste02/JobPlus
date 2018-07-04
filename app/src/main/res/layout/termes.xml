@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:background="#fff"
+    android:orientation="vertical"
+    >
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar1"
+        android:minHeight="?attr/actionBarSize"
+        android:background="@color/startblue"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+    </android.support.v7.widget.Toolbar>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="10dp"
+        android:layout_below="@+id/toolbar1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="serif"
+                    android:textStyle="bold"
+                    android:text="Conditions de navigation"
+                    android:textColor="@color/startblue"
+                    android:textSize="18sp" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="serif"
+                    android:layout_marginTop="10dp"
+                    android:textStyle="bold"
+                    android:text="Utilisation de nos services"
+                    android:textColor="#000"
+                    />
+
+                <android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:elevation="50dp"
+                    card_view:cardCornerRadius="3dp"
+                    android:layout_margin="10dp"
+                    android:background="#606060"
+                    android:clickable="true"
+                    >
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:background="#fff"
+                        >
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:padding="10dp"
+                            android:fontFamily="serif"
+                            android:text="the weekend party gonna be hot,don t miss it the weekend party gonna be hot,don t miss it...the weekend party gonna be hot,don t miss it the weekend party gonna be hot,don t miss it...the weekend party gonna be hot,don t miss it the weekend party gonna be hot,don t miss it..."
+                            android:textSize="15sp" />
+                    </LinearLayout>
+
+                </android.support.v7.widget.CardView>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="serif"
+                    android:layout_marginTop="10dp"
+                    android:textStyle="bold"
+                    android:text="Votre Compte JOB+"
+                    android:textColor="#000"
+                    />
+
+                <android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:elevation="50dp"
+                    card_view:cardCornerRadius="3dp"
+                    android:layout_margin="10dp"
+                    android:background="#606060"
+                    android:clickable="true"
+                    >
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:background="#fff"
+                        >
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:padding="10dp"
+                            android:fontFamily="serif"
+                            android:text="the weekend party gonna be hot,don t miss it the weekend party gonna be hot,don t miss it...the weekend party gonna be hot,don t miss it the weekend party gonna be hot,don t miss it...the weekend party gonna be hot,don t miss it the weekend party gonna be hot,don t miss it..."
+                            android:textSize="15sp" />
+                    </LinearLayout>
+
+                </android.support.v7.widget.CardView>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="serif"
+                    android:layout_marginTop="10dp"
+                    android:textStyle="bold"
+                    android:text="Droits d auteurs"
+                    android:textColor="#000"
+                    />
+
+                <android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:elevation="50dp"
+                    card_view:cardCornerRadius="3dp"
+                    android:layout_margin="10dp"
+                    android:background="#606060"
+                    android:clickable="true"
+                    >
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:background="#fff"
+                        >
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:padding="10dp"
+                            android:fontFamily="serif"
+                            android:text="the weekend party gonna be hot,don t miss it the weekend party gonna be hot,don t miss it...the weekend party gonna be hot,don t miss it the weekend party gonna be hot,don t miss it...the weekend party gonna be hot,don t miss it the weekend party gonna be hot,don t miss it..."
+                            android:textSize="15sp" />
+                    </LinearLayout>
+
+                </android.support.v7.widget.CardView>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="serif"
+                    android:layout_marginTop="10dp"
+                    android:textStyle="bold"
+                    android:text="Publicites"
+                    android:textColor="#000"
+                    />
+
+                <android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:elevation="50dp"
+                    card_view:cardCornerRadius="3dp"
+                    android:layout_margin="10dp"
+                    android:background="#606060"
+                    android:clickable="true"
+                    >
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:background="#fff"
+                        >
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:padding="10dp"
+                            android:fontFamily="serif"
+                            android:text="the weekend party gonna be hot,don t miss it the weekend party gonna be hot,don t miss it...the weekend party gonna be hot,don t miss it the weekend party gonna be hot,don t miss it...the weekend party gonna be hot,don t miss it the weekend party gonna be hot,don t miss it..."
+                            android:textSize="15sp" />
+                    </LinearLayout>
+
+                </android.support.v7.widget.CardView>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="serif"
+                    android:layout_marginTop="10dp"
+                    android:textStyle="bold"
+                    android:text="A propos de condition de navigation"
+                    android:textColor="#000"
+                    />
+
+                <android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:elevation="50dp"
+                    card_view:cardCornerRadius="3dp"
+                    android:layout_margin="10dp"
+                    android:background="#606060"
+                    android:id="@+id/cardview_item"
+                    android:clickable="true"
+                    >
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:background="#fff"
+                        >
+
+                        <TextView
+                            android:id="@+id/Comments"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:padding="10dp"
+                            android:fontFamily="serif"
+                            android:text="the weekend party gonna be hot,don t miss it the weekend party gonna be hot,don t miss it...the weekend party gonna be hot,don t miss it the weekend party gonna be hot,don t miss it...the weekend party gonna be hot,don t miss it the weekend party gonna be hot,don t miss it..."
+                            android:textSize="15sp" />
+                    </LinearLayout>
+
+                </android.support.v7.widget.CardView>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>
+
+
+

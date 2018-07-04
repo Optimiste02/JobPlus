@@ -3,6 +3,7 @@ package com.example.steeve.myapplication;
 
 import android.content.Intent;
 import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.net.Uri;
 import android.os.Bundle;
 import android.provider.MediaStore;
@@ -42,8 +43,9 @@ public class RegisterJobseekerActivity extends AppCompatActivity {
     private String Strnom, Strusername, Stremail,  Strpassword, Image;
     private ImageView Flyer;
     private Bitmap bitmap;
-    int PICK_IMAGE_REQUEST = 1;
+        int PICK_IMAGE_REQUEST = 1;
     public static final String PatternMail = "\\b[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,4}\\b";
+
     private RequestQueue queue;
 
 
@@ -71,25 +73,69 @@ public class RegisterJobseekerActivity extends AppCompatActivity {
 
         btn_enregistrer.setOnClickListener(new View.OnClickListener(){
             @Override
-            public void onClick(View v){Image = getStringImage(bitmap);
+            public void onClick(View v){
+                if (bitmap != null) {
+                    Image = getStringImage(bitmap);
+                }else
+                {
+                    bitmap= BitmapFactory.decodeResource(getResources(), R.drawable.jobseeker);
+                }
                 Strnom = nom.getText().toString();
                 Strusername = username.getText().toString();
                 Stremail = email.getText().toString();
                 Strpassword = password.getText().toString();
+
+
                 Pattern p = Pattern.compile(PatternMail);
                 Matcher m = p.matcher(Stremail);
                 if  (Strnom.equalsIgnoreCase("") || Stremail.equalsIgnoreCase("") || Strpassword.equalsIgnoreCase("")){
                     Toast.makeText(RegisterJobseekerActivity.this, "Veuillez remplir tout les champs ", Toast.LENGTH_SHORT).show();
                 }
-                else  if  (Strnom.trim().length() <3) {
-                    Toast.makeText(RegisterJobseekerActivity.this, "Username trop court", Toast.LENGTH_SHORT).show();
+                else  if  (Strnom.trim().length() >50) {
+                  //  Toast.makeText(RegisterJobseekerActivity.this, "Username trop long", Toast.LENGTH_SHORT).show();
+                    nom.setError("Username trop long");
                 }
                 else  if(Stremail.equalsIgnoreCase("")||!m.find()){
-                    Toast.makeText(RegisterJobseekerActivity.this, " Format Mail Invalide", Toast.LENGTH_SHORT).show();
+                    //Toast.makeText(RegisterJobseekerActivity.this, " Format Mail Invalide", Toast.LENGTH_SHORT).show();
+                    email.setError("Format Mail Invalide");
                 }
-                else if (Strpassword.trim().length() < 3) {
-                    Toast.makeText(RegisterJobseekerActivity.this, "Password Trop Court", Toast.LENGTH_SHORT).show();
+                if (Stremail.length() > 50)
+                {
+                   // Toast.makeText(RegisterJobseekerActivity.this, "Votre email doit contenir au plus 50 carateres", Toast.LENGTH_SHORT).show();
+                    email.setError("Email trop long");
                 }
+
+               else if (Strpassword.indexOf(Strusername) > -1)
+                {
+                   // Toast.makeText(RegisterJobseekerActivity.this, "not same your username ", Toast.LENGTH_SHORT).show();
+                    password.setError("Votre password doit etre different de votre nom d'utilisateur");
+                }
+
+                  String upperCaseChars = "(.*[A-Z].*)";
+                if (!Strpassword.matches(upperCaseChars ))
+                {
+                   // Toast.makeText(RegisterJobseekerActivity.this, "Votre mot de passe doit contenir au moins un lettre majiscule", Toast.LENGTH_SHORT).show();
+                    password.setError("Votre mot de passe doit contenir au moins un lettre majiscule");
+                }
+                String numbers = "(.*[0-9].*)";
+                if (!Strpassword.matches(numbers ))
+                {
+                   // Toast.makeText(RegisterJobseekerActivity.this, "Votre mot de passe doit contenir au moins un chiffre", Toast.LENGTH_SHORT).show();
+                    password.setError("Votre mot de passe doit contenir au moins un chiffre");
+                }
+                String specialChars = "(.*[,~,!,@,#,$,%,^,&,*,(,),-,_,=,+,[,{,],},|,;,:,<,>,/,?].*$)";
+                if (Strpassword.matches(specialChars ))
+                {
+                    //Toast.makeText(RegisterJobseekerActivity.this, "Votre mot de passe doit contenir de caractere speciaux", Toast.LENGTH_SHORT).show();
+                    password.setError("Votre mot de passe doit contenir de caractere speciaux");
+                }
+                if (Strpassword.length() > 20 || Strpassword.length() < 8)
+                {
+                    //Toast.makeText(RegisterJobseekerActivity.this, "Votre mot de passe doit etre compris entre 8 a 20 carateres", Toast.LENGTH_SHORT).show();
+                    password.setError("Votre mot de passe doit etre compris entre 8 a 20 carateres");
+                }
+
+
                 else {
                     RegisterMember();
                 }
@@ -97,6 +143,8 @@ public class RegisterJobseekerActivity extends AppCompatActivity {
         });
 
     }
+
+
     // Methode pour choisir la photo
     private void ShowFileChooser() {
         Intent intent = new Intent();
@@ -128,10 +176,15 @@ public class RegisterJobseekerActivity extends AppCompatActivity {
                 bitmap = MediaStore.Images.Media.getBitmap(getContentResolver(), filePath);
                 //Setting the Bitmap to ImageView
                 Flyer.setImageBitmap(bitmap);
-            } catch (IOException e) {
+
+
+            }
+
+            catch (IOException e) {
                 e.printStackTrace();
             }
         }
+
     }
 
     private void RegisterMember() {
@@ -171,10 +224,15 @@ public class RegisterJobseekerActivity extends AppCompatActivity {
         requestQueue.add(stringRequest);
     }
 
+
+
     public void displayAlert(final String code) {
         if (code.equals("Req_Success")) {
             // Toast.makeText(Register.this, "SuccessFull", Toast.LENGTH_LONG).show();
-            finish();
+           // finish();
+            Intent intent = new Intent(RegisterJobseekerActivity.this, Panell.class);
+
+            startActivity(intent);
         } else if (code.equals("ReqFound")) {
         }
     }

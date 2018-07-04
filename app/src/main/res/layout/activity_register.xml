@@ -1,19 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-
-<LinearLayout
-    android:layout_height="match_parent"
-    android:layout_width="match_parent"
-    xmlns:android="http://schemas.android.com/apk/res/android">
-
-
     <ScrollView
         xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:app="http://schemas.android.com/apk/res-auto"
         xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-
-        >
+        android:layout_height="fill_parent">
 
         <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
             xmlns:app="http://schemas.android.com/apk/res-auto"
@@ -27,8 +18,8 @@
                 android:layout_height="match_parent"
                 android:paddingBottom="0dp"
                 android:layout_marginLeft="45dp"
-                android:layout_marginRight="45dp"
-                >
+                android:layout_marginRight="45dp">
+
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -39,8 +30,8 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:background="@android:color/transparent"
-                        android:orientation="vertical"
-                        >
+                        android:orientation="vertical">
+
 
                         <LinearLayout
                             android:layout_width="match_parent"
@@ -190,6 +181,7 @@
                             android:background="@drawable/bkg_btn"
                             android:textColor="#1d446f"
                             android:layout_marginTop="5dp"
+                            android:layout_marginBottom="40dp"
                             android:text="S'inscrire ! "/>
 
 
@@ -203,4 +195,3 @@
         </android.support.constraint.ConstraintLayout>
 
     </ScrollView>
-</LinearLayout>

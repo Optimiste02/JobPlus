@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">lobo</string>
     <string name="signUp_entrep">Entreprise</string>
@@ -36,6 +37,8 @@
     <string name="navigation_drawer_close">Close navigation drawer</string>
 
     <string name="action_settings">Settings</string>
+    <string name="avis"><u>AVIS DE RECRUTEMENT</u></string>
+    <string name="abonner">Choississez les differentes departement dans lesquels vous voulez recevoir des notifications</string>
 
 
 </resources>
